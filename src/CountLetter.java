@@ -46,7 +46,7 @@ public class CountLetter {
         FileReader file01 = new FileReader("/home/nidaa/IdeaProjects/CountLetter/International-Center.txt");
         Scanner sc= new Scanner(System.in); //System.in is a standard input stream
         System.out.print("Enter a Letter: ");
-        char letter= sc.next(".").charAt(0);              //reads string
+        char letter= sc.next(".").charAt(0);              //reads char
         CountLetter cl1 = new CountLetter(file01, letter);
 
         System.out.println(cl1.count(cl1.readFile()));
