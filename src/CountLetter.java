@@ -1,4 +1,5 @@
 import java.io.*;
+import java.util.Scanner;
 
 public class CountLetter {
     private final char lookFor;
@@ -43,7 +44,10 @@ public class CountLetter {
 
     public static void main(String[] args) throws IOException {
         FileReader file01 = new FileReader("/home/nidaa/IdeaProjects/CountLetter/International-Center.txt");
-        CountLetter cl1 = new CountLetter(file01, 'e');
+        Scanner sc= new Scanner(System.in); //System.in is a standard input stream
+        System.out.print("Enter a Letter: ");
+        char letter= sc.next(".").charAt(0);              //reads string
+        CountLetter cl1 = new CountLetter(file01, letter);
 
         System.out.println(cl1.count(cl1.readFile()));
     }
